@@ -24,7 +24,7 @@ from yt_dlp.utils import (
 async def download_video(event):
   url = None
   t_type = None
-  typee = str(event.pattern_match.group(1).lower())
+  typee = str(event.pattern_match.group(1))
   rl = typee.split(" ")
   url = rl[1]
   type = rl[0]
@@ -90,8 +90,7 @@ async def download_video(event):
         )
       return
   except MaxDownloadsReached:
-      await vtx.edit("`Max-download
-has been reached.`")
+      await vtx.edit("`Max-download has been reached.`")
       return
   except PostProcessingError:
       await vtx.edit("`There was an error during post processing.`")
