@@ -2,7 +2,7 @@ import glob
 from pathlib import Path
 import logging
 from . import bot
-
+from luffy.utils import load_plug
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s', level=logging.WARNING)
 
@@ -16,7 +16,7 @@ for name in files:
         # Do whatever you need with 'plugs' variable here
         print(f"Loaded plugin: {plugs}")
 
-print("luffy BOT STARTED & LOADED ALL PLUGINS")
+        load_plug(plugs.replace(".py", "")
 
 if __name__ == "__main__":
     bot.run_until_disconnected()
