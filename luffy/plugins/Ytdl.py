@@ -181,7 +181,7 @@ def humanbytes(size):
     """Input size in bytes,
     outputs in a human readable format"""
     # https://stackoverflow.com/a/4936172/4723940
-   if not size:
+if not size:
         return ""
     # 2 ** 10 = 1024
     power = 2 ** 10
