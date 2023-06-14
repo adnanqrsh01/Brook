@@ -3,6 +3,7 @@ from pathlib import Path
 import logging
 from . import bot
 from luffy.utils import load_plug
+from sys import argv
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s', level=logging.WARNING)
 
@@ -19,4 +20,10 @@ for name in files:
         load_plug(plugs.replace(".py", "")
 
 if __name__ == "__main__":
+    if len(argv) not in (1, 3, 4):
+
+    bot.disconnect()
+
+    else:
+
     bot.run_until_disconnected()
