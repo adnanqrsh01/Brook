@@ -183,7 +183,7 @@ def humanbytes(size):
     # https://stackoverflow.com/a/4936172/4723940
 if not size:
     return ""
-    # 2 ** 10 = 1024
+# 2 ** 10 = 1024
 power = 2 ** 10
 raised_to_pow = 0
 dict_power_n = {0: "", 1: "Ki", 2: "Mi", 3: "Gi", 4: "Ti"}
