@@ -17,7 +17,7 @@ for name in files:
         # Do whatever you need with 'plugs' variable here
         print(f"Loaded plugin: {plugs}")
 
-        load_plug(plugs.replace(".py", "")
+        load_plug(plugs.replace(".py", ""))
 
 if __name__ == "__main__":
     if len(argv) not in (1, 3, 4):
