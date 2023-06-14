@@ -20,10 +20,8 @@ for name in files:
         load_plug(plugs.replace(".py", ""))
 
 if __name__ == "__main__":
-    if len(argv) not in (1, 3, 4):
+  if len(argv) not in (1, 3, 4):
+      bot.disconnect()
 
-    bot.disconnect()
-
-    else:
-
-    bot.run_until_disconnected()
+  else:
+      bot.run_until_disconnected()
